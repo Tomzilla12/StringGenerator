@@ -6,7 +6,6 @@ function generateRandomString(includeLetters, includeNumbers, numberOfCharacters
     var letters = "abcdefghijklmnopqrstuvwxyz";
     var numbers = "0123456789";
     var randomString = "";
-    console.log(includeLetters);
 
     var counter = 0;
     var characterType;
@@ -31,7 +30,15 @@ function generateRandomString(includeLetters, includeNumbers, numberOfCharacters
     return randomString;
 }
 
+function setColorMode() {
+    var newColorMode = localStorage.colorMode;
+    $('#page').removeClass('darkmode');
+    $('#page').removeClass('lightmode');
+    $('#page').addClass(newColorMode);
+}
+
 $(function(){
+    // Generate String
     $('#generate').click(function() {
         var includeLetters = $('#includeLetters').prop('checked');
         var includeNumbers = $('#includeNumbers').prop('checked');
@@ -39,6 +46,14 @@ $(function(){
         
         $('#randomString').html(generateRandomString(includeLetters, includeNumbers, numberOfCharacters).toUpperCase());
     });
-
     $('#generate').click();
+
+    
+    // Modes
+    $('.changeMode').click(function(){
+        var newColorMode = $(this).attr('class').split(' ')[1];
+        localStorage.colorMode = newColorMode;
+        setColorMode();
+    });
+    setColorMode();
 });

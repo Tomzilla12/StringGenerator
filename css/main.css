@@ -5,6 +5,10 @@ html {
   overflow: hidden;
 }
 
+body {
+  margin: 0;
+}
+
 h1, h2, h3, h4, p {
   padding: 0;
   margin: 0;
@@ -47,6 +51,9 @@ hr {
 
 input {
   min-height: 24px;
+  border: solid 1px rgba(128, 128, 128, 0.61);
+  padding: 5px;
+  vertical-align: middle;
 }
 
 button, input[type=button] {
@@ -80,13 +87,97 @@ button:active, input[type=button]:active {
   box-shadow: inset 1px 1px 1px 1px rgba(189, 189, 189, 0.5);
 }
 
+button.darkmode, input[type=button].darkmode {
+  color: black;
+  border-color: black;
+}
+
+button.lightmode, input[type=button].lightmode {
+  color: white;
+  border-color: white;
+}
+
+/* Dark Mode */
+#page button.lightmode {
+  display: none;
+}
+
+#page button.darkmode {
+  display: inline;
+}
+
+#page.darkmode {
+  background-color: black;
+}
+
+#page.darkmode p {
+  color: white;
+}
+
+#page.darkmode input {
+  background-color: transparent;
+  color: white;
+}
+
+#page.darkmode button:hover, #page.darkmode input[type=button]:hover {
+  outline: none;
+  padding: 5px 15px;
+  box-shadow: 1px 1px 1px 1px rgba(50, 50, 50, 0.5);
+}
+
+#page.darkmode button:focus, #page.darkmode input[type=button]:focus {
+  outline: none;
+  padding: 5px 15px;
+  box-shadow: 1px 1px 1px 1px rgba(50, 50, 50, 0.5);
+}
+
+#page.darkmode button:active, #page.darkmode input[type=button]:active {
+  outline: none;
+  padding: 5px 15px;
+  box-shadow: inset 1px 1px 1px 1px rgba(50, 50, 50, 0.5);
+}
+
+#page.darkmode button.darkmode, #page.darkmode input[type=button].darkmode {
+  display: none;
+}
+
+#page.darkmode button.lightmode, #page.darkmode input[type=button].lightmode {
+  display: inline;
+}
+
+#page.darkmode {
+  background-color: black;
+}
+
+#page.darkmode p {
+  color: white;
+}
+
+#page.darkmode button:hover, #page.darkmode input[type=button]:hover {
+  outline: none;
+  padding: 5px 15px;
+  box-shadow: 1px 1px 1px 1px rgba(50, 50, 50, 0.5);
+}
+
+#page.darkmode button:focus, #page.darkmode input[type=button]:focus {
+  outline: none;
+  padding: 5px 15px;
+  box-shadow: 1px 1px 1px 1px rgba(50, 50, 50, 0.5);
+}
+
+#page.darkmode button:active, #page.darkmode input[type=button]:active {
+  outline: none;
+  padding: 5px 15px;
+  box-shadow: inset 1px 1px 1px 1px rgba(50, 50, 50, 0.5);
+}
+
 /* CONTENT */
-.absatz {
+#content .absatz {
   width: 100%;
   height: 100vh;
 }
 
-.absatz > div {
+#content .absatz > div {
   width: 60%;
   min-width: 800px;
   max-width: 1500px;
@@ -96,13 +187,26 @@ button:active, input[type=button]:active {
   text-align: center;
 }
 
-.absatz > div > span {
+#content .absatz > div > span {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
 }
 
-.footer {
+#nav {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  left: 0;
+  top: 0;
+  text-align: right;
+}
+
+#nav button {
+  margin: 10px;
+}
+
+#footer {
   position: absolute;
   width: 100%;
   height: 50px;
@@ -112,7 +216,7 @@ button:active, input[type=button]:active {
   text-align: center;
 }
 
-.footer p {
+#footer p {
   font-size: 16px;
 }
  
