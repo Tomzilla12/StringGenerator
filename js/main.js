@@ -37,6 +37,6 @@ $(function(){
         var includeNumbers = $('#includeNumbers').prop('checked');
         var numberOfCharacters = $('#numberOfCharacters').val();
         
-        $('#randomString').html(generateRandomString(includeLetters, includeNumbers, numberOfCharacters));
+        $('#randomString').html(generateRandomString(includeLetters, includeNumbers, numberOfCharacters).toUpperCase());
     });
 });
