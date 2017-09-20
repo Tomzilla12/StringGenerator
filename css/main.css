@@ -1,0 +1,106 @@
+html {
+  font-family: 'Lato', 'Open Sans', 'Raleway', 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  color: #000000;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, p {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 56px;
+  color: #2A45FF;
+  margin: 10px 0px 20px 0px;
+}
+
+h2 {
+  font-size: 36px;
+  color: #4263FF;
+  margin: 5px 0px 10px 0px;
+}
+
+h3 {
+  font-size: 28px;
+  color: #2A45FF;
+  margin: 5px 0px 10px 0px;
+}
+
+h4 {
+  font-size: 24px;
+  color: #4263FF;
+  margin: 5px 0px 10px 0px;
+}
+
+p {
+  font-size: 24px;
+  color: #000000;
+  margin: 10px 0px;
+}
+
+hr {
+  border: none;
+  border-bottom: dashed 1px #4263FF;
+}
+
+input {
+  min-height: 24px;
+}
+
+button, input[type=button] {
+  font-family: 'Lato', 'Open Sans', 'Raleway', 'Source Sans Pro', sans-serif;
+  color: #4263FF;
+  background-color: transparent;
+  border: solid 1px #4263FF;
+  font-size: 24px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition-property: padding, box-shadow;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+button:hover, input[type=button]:hover {
+  outline: none;
+  padding: 5px 15px;
+  box-shadow: 1px 1px 1px 1px rgba(189, 189, 189, 0.5);
+}
+
+button:focus, input[type=button]:focus {
+  outline: none;
+  padding: 5px 15px;
+  box-shadow: 1px 1px 1px 1px rgba(189, 189, 189, 0.5);
+}
+
+button:active, input[type=button]:active {
+  outline: none;
+  padding: 5px 15px;
+  box-shadow: inset 1px 1px 1px 1px rgba(189, 189, 189, 0.5);
+}
+
+/* CONTENT */
+.absatz {
+  width: 100%;
+  height: 100vh;
+}
+
+.absatz > div {
+  width: 60%;
+  min-width: 800px;
+  max-width: 1500px;
+  margin: 0px auto;
+  height: 100vh;
+  line-height: 100vh;
+  text-align: center;
+}
+
+.absatz > div > span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+ 
+
+ /*# sourceMappingURL= main.css.map */
