@@ -39,4 +39,6 @@ $(function(){
         
         $('#randomString').html(generateRandomString(includeLetters, includeNumbers, numberOfCharacters).toUpperCase());
     });
+
+    $('#generate').click();
 });
